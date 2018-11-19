@@ -1,0 +1,11 @@
+﻿@{
+    Student student = ViewData["student"] as Student;
+    ViewData["test"] = "test";
+}
+
+@ViewData["greeting"]
+<div>ID: @student.ID</div>
+<div>Name: @student.Name</div>
+<div>Birth: @student.Birth</div>
+<br/>
+@Html.ActionLink("Test","Test")

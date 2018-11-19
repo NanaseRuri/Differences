@@ -1,0 +1,17 @@
+﻿<h2>ViewDataTest2</h2>
+@{
+    ViewData["Student"] = new Student()
+    {
+        ID = 1,
+        Birth = new DateTime(1997,1,1),
+        Name = "Nanase"
+    };
+    ViewData["Greeting"] = "Good morning";
+}
+
+View: @ViewData["Greeting"]
+<br />
+@await Html.PartialAsync("PartialView", new ViewDataDictionary(ViewData))
+@*<partial name="PartialView" view-data="ViewData" />*@
+View: @ViewData["Greeting"]
+

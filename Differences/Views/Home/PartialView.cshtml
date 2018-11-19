@@ -1,0 +1,15 @@
+﻿@{
+    Student student = ViewData["Student"] as Student;
+}
+
+Partial: @ViewData["Greeting"]
+<hr />
+<div>ID: @student.ID</div>
+<div>Name: @student.Name</div>
+<div>Birth: @student.Birth</div>
+<hr />
+@{
+    ViewData["Greeting"] = "Good afternoon";
+}
+
+<div>Partial: @ViewData["Greeting"]</div>

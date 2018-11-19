@@ -1,0 +1,8 @@
+﻿<h2>ViewBagTest</h2>
+@{
+    ViewBag.Hi = "Fuck";
+
+}
+<div>View: @(ViewBag.Student.ID + 1)</div>
+
+@await Html.PartialAsync("_ViewBagPartial")

@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "ReceiveTempData";
+}
+
+<h2>ReceiveTempData</h2>
+
+<div>@TempData["error"]</div>
+
+@*将 TempData["greetng"] 生命期延长一次*@
+<div>@TempData.Peek("greeting")</div>
+
+<br/>
+@Html.ActionLink("ReceiveTempData2", "ReceiveTempData2")
